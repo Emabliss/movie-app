@@ -9,12 +9,12 @@ const Home = ({ moviesList }) => {
   const [data, setData] = useState(initialState)
 
   useEffect(() => {
-    const getMovieRequest = async (searchValue) => {
-      const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=17f2850a`
+    const getMovieRequest = async () => {
+      const url = `http://www.omdbapi.com/?s=spiderman&apikey=17f2850a`
       const res = await axios.get(url)
       res.data.Search && setData(res.data.Search)
     }
-    getMovieRequest(searchValue)
+    getMovieRequest()
   }, [searchValue])
 
   const notSeries = data.filter((d) => d.Type !== 'series')
