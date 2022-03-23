@@ -14,7 +14,7 @@ module.exports = {
       },
       width: {
         logo: '193px',
-        search: '1306px',
+        search: '85%',
         box: '300px',
         '90%': '90%',
         '80%': '80%',
