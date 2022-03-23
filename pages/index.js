@@ -42,7 +42,7 @@ const Home = ({ moviesList }) => {
           <label>Search</label>
           <input
             type="text"
-            className="box-border h-search w-full border-2 border-gray-600 px-3 outline-none md:w-search "
+            className="box-border h-search w-full border border-gray-600 px-3 outline-none md:w-search "
             onChange={(e) => {
               if (searchValue.length === 1) {
                 setData(initialState)
@@ -73,10 +73,10 @@ const Home = ({ moviesList }) => {
 
         <div className="mx-auto mt-8 w-3/4 md:w-90%">
           <h2 className="mb-2 text-2xl">{series[0]?.Type}</h2>
-          <div className="flex flex-col text-white md:flex-row md:space-x-13px">
+          <div className="flex flex-col flex-wrap justify-center text-white md:flex-row md:space-x-13px lg:flex-nowrap">
             {series?.map((d) => (
               <div
-                className="mb-4 grid h-box w-full place-content-center rounded-sm text-white transition-all hover:scale-105 md:mb-0 md:w-1/4"
+                className="mb-4 mt-4 grid h-box w-full place-content-center rounded-sm text-lg text-white transition-all hover:scale-105 md:mb-0 md:w-1/4 lg:mt-0"
                 key={d.Title}
                 style={{
                   background: `url(${d.Poster})`,
