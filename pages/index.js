@@ -10,7 +10,7 @@ const Home = ({ moviesList }) => {
 
   useEffect(() => {
     const getMovieRequest = async (searchValue) => {
-      const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=17f2850a`
+      const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=17f2850a`
       const res = await axios.get(url)
       res.data.Search && setData(res.data.Search)
     }
